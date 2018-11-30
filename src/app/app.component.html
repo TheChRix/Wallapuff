@@ -1,23 +1,54 @@
-import { RouterModule, Routes } from "@angular/router";
-import { ModuleWithProviders } from "@angular/core";
-//import { ProductListComponent } from "./product-list/product-list.component";
-//import { ProductDetailComponent } from "./product-detail/product-detail.component";
-//import { SidebarComponent } from "./sidebar/sidebar.component";
-//import { ProductListSidebarComponent } from "./product-list-sidebar/product-list-sidebar.component";
-import { PostComponent } from "../post/post.component";
+<nav class="navbar navbar-expand-lg navbar-light" style="background:#fefefe;">
+  <a class="logo" href="#"></a>
 
-const routes: Routes = [
-  { path: "products", component: PostComponent },
-  {
-    path: "",
-    component: PostComponent,
-    outlet: "sidebar"
-  },
-  {
-    path: "products",
-    component: PostComponent,
-    outlet: "sidebar"
-  }
-];
+  <ul class="navbar-nav mr-auto">
+    <div style="border: 1px solid #cfd8dc;margin-left:8px;border-radius: 10px;">
+      <form class="form-inline my-2 my-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            class="btn btn-light botonClaro dropdown-toggle"
+            style="border-radius: 10px 0px 0px 10px;"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ><i class="far fa-list-alt"></i
+          ></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Busco/Ofrezco trabajo</a>
+            <a class="dropdown-item" href="#">Wallapuffs estrella</a>
+            <a class="dropdown-item" href="#">Ventas picantes Frikis</a>
+            <a class="dropdown-item" href="#">Wallapuff de ELPLURAL.COM</a>
+            <a class="dropdown-item" href="#">Patadas a la RAE</a>
+            <a class="dropdown-item" href="#">Quintas rebajas</a>
+            <a class="dropdown-item" href="#">Timos</a>
+            <a class="dropdown-item" href="#">Trapicheos</a>
+            <a class="dropdown-item" href="#"> Bizarro</a>
+            <a class="dropdown-item" href="#">Chats privados</a>
 
-export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes);
+            <!-- div class="dropdown-divider"></div -->
+          </div>
+        </li>
+
+        <input
+          class="form-control mr-sm-2 busqueda"
+          type="search"
+          style="border: 0px;border-radius: 0;margin-right: 0px!important;"
+          placeholder="Buscar"
+          aria-label="Search"
+        />
+        <button
+          class="btn my-2 my-sm-0 boton"
+          style="border-radius: 0px 10px 10px 0px;"
+          type="submit"
+        >
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
