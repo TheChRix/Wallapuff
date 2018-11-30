@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 8px;
+}
+
+.grid > * {
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background: #d5d5d5;
+}
+
+.logo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(https://es.wallapop.com/images/icons/ic-logo-web.svg) 0 4px;
+  background-size: 49px;
+}
+
+.boton {
+  background-color: #eceff1;
+  color: black;
+}
+
+.boton:focus,
+.boton:hover {
+  background-color: #5ec1ad;
+}
+
+.botonClaro:focus,
+.botonClaro:hover {
+  background-color: #eceff1;
+}
+.contenido {
+  margin: 6px;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+@media (min-width: 951px) {
+  .padre {
+    max-height: 350px;
+    overflow: hidden;
+  }
+
+  .padre > img {
+    width: 100%;
+    margin-top: -10%;
+  }
+}
+
+@media (max-width: 950px) {
+  .padre > img {
+    width: 100%;
+    margin-top: -10%;
+  }
+  .padre {
+    max-height: 560px;
+    overflow: hidden;
+  }
+
+  .mb-2,
+  .my-2 {
+    margin-bottom: 0 !important;
+  }
+  .mt-2,
+  .my-2 {
+    margin-top: 0 !important;
+  }
+  .form-control {
+    width: auto;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: absolute !important;
+  }
+  .busqueda {
+    max-width: 130px;
+  }
+}

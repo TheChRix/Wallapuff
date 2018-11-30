@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="grid" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScrollDown()">
+		<div *ngFor="let posts of post; let i = index" class="contenido gird " style="background-color:white;">
+			<div class="padre">
+				<img
+          id="{{posts.id}}"
+          src="{{posts.content.rendered}}"
+          alt=""
+        />
+      </div>
+      <hr />
+      <h4 [innerHTML]="posts.title.rendered"></h4>
+      <a [innerHTML]="posts.excerpt.rendered"></a>
+      <!-- div [innerHTML]="posts.content.rendered"></div -->
+    </div>
+  </div>
+
+</div>

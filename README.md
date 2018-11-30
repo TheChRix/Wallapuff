@@ -1,2 +1,0 @@
-# Wallapuff
-Created with CodeSandbox
