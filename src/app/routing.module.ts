@@ -5,12 +5,13 @@ import { ModuleWithProviders } from "@angular/core";
 //import { SidebarComponent } from "./sidebar/sidebar.component";
 //import { ProductListSidebarComponent } from "./product-list-sidebar/product-list-sidebar.component";
 import { PostComponent } from "../post/post.component";
+import { CategoriaComponent } from "../categoria/categoria.component";
 
 const routes: Routes = [
-  { path: "products", component: PostComponent },
+  { path: "categoria", component: CategoriaComponent },
   {
     path: "",
-    component: PostComponent,
+    component: PostComponent
   },
   {
     path: "products",

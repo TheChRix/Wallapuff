@@ -9,9 +9,10 @@ import { PostService } from "../servicios/post.service";
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { routingModule } from "./routing.module";
+import { CategoriaComponent } from "../categoria/categoria.component";
 
 @NgModule({
-  declarations: [AppComponent, PostComponent],
+  declarations: [AppComponent, PostComponent, CategoriaComponent],
   imports: [BrowserModule, HttpModule, InfiniteScrollModule, routingModule],
   providers: [PostService],
   bootstrap: [AppComponent, PostComponent]
